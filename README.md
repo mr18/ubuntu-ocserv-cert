@@ -34,6 +34,7 @@ cert_signing_key
 crl_signing_key
 ```
 
+
 9. `sudo certtool --generate-self-signed --load-privkey ca-privkey.pem --template ca-cert.cfg --outfile ca-cert.pem`
 
 10. `sudo vi client-cert.cfg`
@@ -55,18 +56,19 @@ signing_key
 encryption_key
 ```
 
+
 12.`sudo certtool --generate-certificate --load-privkey client-privkey.pem --load-ca-certificate ca-cert.pem \
     --load-ca-privkey ca-privkey.pem --template client-cert.cfg --outfile client-cert.pem`
 
-客户端证书
+> 客户端证书 
 
 13. `sudo certtool --to-p12 --load-privkey client-privkey.pem --load-certificate client-cert.pem --pkcs-cipher aes-256 --outfile client.p12 --outder`
 
-IOS 客户端证书
+> IOS 客户端证书
 
 14. `sudo certtool --to-p12 --load-privkey client-privkey.pem --load-certificate client-cert.pem --pkcs-cipher 3des-pkcs12 --outfile ios-client.p12 --outder`
 
-多用户情况生成证书
+> 多用户情况生成证书
 
 1. `sudo vi client-cert.cfg`
 
@@ -92,7 +94,7 @@ encryption_key
     --load-request request.pem --template client-cert.cfg --outfile client-cert.pem`
     
 
-接上
+> 接上14
 
 15. `sudo vim /etc/ocserv/ocserv.conf`
 
