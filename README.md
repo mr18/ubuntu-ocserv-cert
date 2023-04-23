@@ -13,6 +13,7 @@ ubuntu-ocserv-cert
 
 6.`cd /etc/ocserv/ssl/`
 7.`sudo vi ca-cert.cfg`
+
 8.
 ```
 # X.509 Certificate options
@@ -41,6 +42,7 @@ cert_signing_key
 # Whether this key will be used to sign CRLs.
 crl_signing_key
 ```
+
 9.`sudo certtool --generate-self-signed --load-privkey ca-privkey.pem --template ca-cert.cfg --outfile ca-cert.pem`
 10.`sudo vi client-cert.cfg`
 11.
