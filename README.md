@@ -57,15 +57,12 @@ encryption_key
 
 12.`sudo certtool --generate-certificate --load-privkey client-privkey.pem --load-ca-certificate ca-cert.pem \
     --load-ca-privkey ca-privkey.pem --template client-cert.cfg --outfile client-cert.pem`
+    
+    客户端证书
 13. `sudo certtool --to-p12 --load-privkey client-privkey.pem --load-certificate client-cert.pem --pkcs-cipher aes-256 --outfile client.p12 --outder`
 
-Generating a PKCS #12 structure...
-Loading private key list...
-Loaded 1 private keys.
-Enter a name for the key: huatai
-Enter password:
-Confirm password:
-
+    IOS 客户端证书
+14. `sudo certtool --to-p12 --load-privkey client-privkey.pem --load-certificate client-cert.pem --pkcs-cipher 3des-pkcs12 --outfile ios-client.p12 --outder`
 
     
     
