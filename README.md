@@ -5,14 +5,15 @@ ubuntu-ocserv-cert
 
 2.`chmod +x ocserv.sh`
 
-`sudo bash ocserv.sh`
+3.`sudo bash ocserv.sh`
 
-`sudo apt install gnutls-bin`
+4.`sudo apt install gnutls-bin`
 
-`sudo mkdir /etc/ocserv/ssl/`
+5.`sudo mkdir /etc/ocserv/ssl/`
 
-`cd /etc/ocserv/ssl/`
+6.`cd /etc/ocserv/ssl/`
 
+7.
 ```
 # X.509 Certificate options
 
@@ -40,7 +41,7 @@ cert_signing_key
 # Whether this key will be used to sign CRLs.
 crl_signing_key
 ```
-
+8.`sudo certtool --generate-self-signed --load-privkey ca-privkey.pem --template ca-cert.cfg --outfile ca-cert.pem`
 
 # links
 [https://github.com/sfc9982/AnyConnect-Server](https://github.com/sfc9982/AnyConnect-Server)
