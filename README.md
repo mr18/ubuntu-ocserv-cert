@@ -13,6 +13,8 @@ ubuntu-ocserv-cert
 
 6. `cd /etc/ocserv/ssl/`
 
+> 生成服务端cert
+
 7. `sudo vi ca-cert.cfg`
 
 8. 
@@ -36,6 +38,8 @@ crl_signing_key
 
 
 9. `sudo certtool --generate-self-signed --load-privkey ca-privkey.pem --template ca-cert.cfg --outfile ca-cert.pem`
+
+> 生成客户端cert
 
 10. `sudo vi client-cert.cfg`
 
@@ -61,10 +65,11 @@ encryption_key
     --load-ca-privkey ca-privkey.pem --template client-cert.cfg --outfile client-cert.pem`
 
 > 客户端证书 
+> 单用户情况
 
 13. `sudo certtool --to-p12 --load-privkey client-privkey.pem --load-certificate client-cert.pem --pkcs-cipher aes-256 --outfile client.p12 --outder`
 
-> IOS 客户端证书
+> ps: IOS 客户端证书
 
 14. `sudo certtool --to-p12 --load-privkey client-privkey.pem --load-certificate client-cert.pem --pkcs-cipher 3des-pkcs12 --outfile ios-client.p12 --outder`
 
