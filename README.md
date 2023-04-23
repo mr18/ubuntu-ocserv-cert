@@ -100,9 +100,9 @@ encryption_key
 15. `sudo vim /etc/ocserv/ocserv.conf`
 
 ```
-# 密码认证
-auth = "plain[passwd=/etc/ocserv/ocpasswd]"
-# 密钥认证
+
+#auth = "plain[passwd=/etc/ocserv/ocpasswd]"
+
 auth = "certificate
 
 ca-cert = /etc/ocserv/ssl/ca-cert.pem
