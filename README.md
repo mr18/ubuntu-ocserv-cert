@@ -12,8 +12,9 @@ ubuntu-ocserv-cert
 5.`sudo mkdir /etc/ocserv/ssl/`
 
 6.`cd /etc/ocserv/ssl/`
-7. `sudo vi ca-cert.cfg`
-8.```
+7.`sudo vi ca-cert.cfg`
+8.
+```
 # X.509 Certificate options
 
 # The organization of the subject.
@@ -42,7 +43,8 @@ crl_signing_key
 ```
 9.`sudo certtool --generate-self-signed --load-privkey ca-privkey.pem --template ca-cert.cfg --outfile ca-cert.pem`
 10.`sudo vi client-cert.cfg`
-11.```
+11.
+```
 # X.509 Certificate options
 # The organization of the subject.
 organization = "vpn.example.com"
