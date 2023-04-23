@@ -19,7 +19,7 @@ ubuntu-ocserv-cert
 ```
 organization = "vpn.example.com"
 
-cn = "Example CA"
+cn = "VPN"
 
 serial = 001
 
@@ -43,9 +43,9 @@ crl_signing_key
 ```
 organization = "vpn.example.com"
 
-cn = "John Doe"
+cn = "VPN"
 
-uid = "username"
+uid = "John"
 
 expiration_days = 3650
 
@@ -68,6 +68,7 @@ encryption_key
 
 14. `sudo certtool --to-p12 --load-privkey client-privkey.pem --load-certificate client-cert.pem --pkcs-cipher 3des-pkcs12 --outfile ios-client.p12 --outder`
 
+
 > 多用户情况生成证书
 
 1. `sudo vi client-cert.cfg`
@@ -76,9 +77,9 @@ encryption_key
 ```
 organization = "vpn.example.com"
 
-cn = "John Doe"
+cn = "VPN"
 
-uid = "username"
+uid = "John"
 
 expiration_days = 3650
 
