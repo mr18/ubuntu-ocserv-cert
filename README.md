@@ -116,7 +116,7 @@ ca-cert = /etc/ocserv/ssl/ca-cert.pem
 
     
 # links
-[https://github.com/sfc9982/AnyConnect-Server](https://github.com/sfc9982/AnyConnect-Serve)
+[https://github.com/sfc9982/AnyConnect-Server](https://github.com/sfc9982/AnyConnect-Server)
 
 [https://cloud-atlas.readthedocs.io/zh_CN/latest/linux/security/vpn/ocserv/client_certificate_ocserv.html](https://cloud-atlas.readthedocs.io/zh_CN/latest/linux/security/vpn/ocserv/client_certificate_ocserv.html)
 
