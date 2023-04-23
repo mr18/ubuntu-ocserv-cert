@@ -34,11 +34,11 @@ cert_signing_key
 crl_signing_key
 ```
 
-9.`sudo certtool --generate-self-signed --load-privkey ca-privkey.pem --template ca-cert.cfg --outfile ca-cert.pem`
+9. `sudo certtool --generate-self-signed --load-privkey ca-privkey.pem --template ca-cert.cfg --outfile ca-cert.pem`
 
-10.`sudo vi client-cert.cfg`
+10. `sudo vi client-cert.cfg`
 
-11.
+11. 
 ```
 organization = "vpn.example.com"
 
@@ -57,6 +57,16 @@ encryption_key
 
 12.`sudo certtool --generate-certificate --load-privkey client-privkey.pem --load-ca-certificate ca-cert.pem \
     --load-ca-privkey ca-privkey.pem --template client-cert.cfg --outfile client-cert.pem`
+13. `sudo certtool --to-p12 --load-privkey client-privkey.pem --load-certificate client-cert.pem --pkcs-cipher aes-256 --outfile client.p12 --outder`
+
+Generating a PKCS #12 structure...
+Loading private key list...
+Loaded 1 private keys.
+Enter a name for the key: huatai
+Enter password:
+Confirm password:
+
+
     
     
 # links
