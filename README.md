@@ -12,6 +12,7 @@ ubuntu-ocserv-cert
 5.`sudo mkdir /etc/ocserv/ssl/`
 
 6.`cd /etc/ocserv/ssl/`
+
 7.`sudo vi ca-cert.cfg`
 
 8.
@@ -44,7 +45,9 @@ crl_signing_key
 ```
 
 9.`sudo certtool --generate-self-signed --load-privkey ca-privkey.pem --template ca-cert.cfg --outfile ca-cert.pem`
+
 10.`sudo vi client-cert.cfg`
+
 11.
 ```
 # X.509 Certificate options
@@ -72,6 +75,8 @@ signing_key
 encryption_key
 ```
 
+12.`sudo certtool --generate-certificate --load-privkey client-privkey.pem --load-ca-certificate ca-cert.pem \
+    --load-ca-privkey ca-privkey.pem --template client-cert.cfg --outfile client-cert.pem`
 # links
 [https://github.com/sfc9982/AnyConnect-Server](https://github.com/sfc9982/AnyConnect-Server)
 [https://github.com/tinkernels/anyconnect-routes](https://github.com/tinkernels/anyconnect-routes)
