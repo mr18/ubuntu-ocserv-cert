@@ -1,7 +1,7 @@
 # ubuntu-ocserv-cert
 ubuntu-ocserv-cert
 
-`wget -N --no-check-certificate https://raw.githubusercontent.com/sfc9982/AnyConnect-Server/main/ocserv.sh`
+1. `wget -N --no-check-certificate https://raw.githubusercontent.com/sfc9982/AnyConnect-Server/main/ocserv.sh`
 
 `chmod +x ocserv.sh`
 
