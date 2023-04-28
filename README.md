@@ -67,8 +67,8 @@ encryption_key
 
 14.
 ``` 
-sudo certtool --generate-certificate --load-privkey client-privkey.pem --load-ca-certificate ca-cert.pem \ 
-  --load-ca-privkey ca-privkey.pem --template client-cert.cfg --outfile client-cert.pem 
+ sudo certtool --generate-certificate --load-privkey client-privkey.pem --load-ca-certificate ca-cert.pem \
+     --load-ca-privkey ca-privkey.pem --template client-cert.cfg --outfile client-cert.pem
 ```
 
 > 客户端证书 
@@ -107,8 +107,8 @@ encryption_key
 
 4. 
 ```
-sudo certtool --generate-certificate --load-ca-certificate ca-cert.pem --load-ca-privkey ca-privkey.pem \ 
-  --load-request request.pem --template client-cert.cfg --outfile client-cert.pem   
+sudo certtool --generate-certificate --load-ca-certificate ca-cert.pem --load-ca-privkey ca-privkey.pem \
+    --load-request request.pem --template client-cert.cfg --outfile client-cert.pem
 ```
     
 
