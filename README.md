@@ -105,10 +105,10 @@ encryption_key
 
 3. `sudo certtool --generate-request --load-privkey client-privkey.pem --template client-cert.cfg --outfile request.pem`
 
-4. ```
+4. 
+```
 sudo certtool --generate-certificate --load-ca-certificate ca-cert.pem --load-ca-privkey ca-privkey.pem \ 
-  --load-request request.pem --template client-cert.cfg --outfile client-cert.pem
-        
+  --load-request request.pem --template client-cert.cfg --outfile client-cert.pem   
 ```
     
 
