@@ -43,9 +43,11 @@ crl_signing_key
 
 > 生成客户端cert
 
-11. `sudo vi client-cert.cfg`
+11. `sudo certtool --generate-privkey --outfile client-privkey.pem`
 
-12. 
+12. `sudo vi client-cert.cfg`
+
+13. 
 ```
 organization = "vpn.example.com"
 
@@ -63,18 +65,18 @@ encryption_key
 ```
 
 
-13.`sudo certtool --generate-certificate --load-privkey client-privkey.pem --load-ca-certificate ca-cert.pem \
+14.`sudo certtool --generate-certificate --load-privkey client-privkey.pem --load-ca-certificate ca-cert.pem \
     --load-ca-privkey ca-privkey.pem --template client-cert.cfg --outfile client-cert.pem`
 
 > 客户端证书 
 
 > 单用户情况
 
-14. `sudo certtool --to-p12 --load-privkey client-privkey.pem --load-certificate client-cert.pem --pkcs-cipher aes-256 --outfile client.p12 --outder`
+15. `sudo certtool --to-p12 --load-privkey client-privkey.pem --load-certificate client-cert.pem --pkcs-cipher aes-256 --outfile client.p12 --outder`
 
 > ps: IOS 客户端证书
 
-15. `sudo certtool --to-p12 --load-privkey client-privkey.pem --load-certificate client-cert.pem --pkcs-cipher 3des-pkcs12 --outfile ios-client.p12 --outder`
+16. `sudo certtool --to-p12 --load-privkey client-privkey.pem --load-certificate client-cert.pem --pkcs-cipher 3des-pkcs12 --outfile ios-client.p12 --outder`
 
 
 > 多用户情况生成证书
@@ -103,9 +105,9 @@ encryption_key
     --load-request request.pem --template client-cert.cfg --outfile client-cert.pem`
     
 
-> 接上15
+> 接上16
 
-16. `sudo vim /etc/ocserv/ocserv.conf`
+17. `sudo vim /etc/ocserv/ocserv.conf`
 
 ```
 
